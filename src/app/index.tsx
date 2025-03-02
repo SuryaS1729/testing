@@ -1,18 +1,13 @@
-import { Text, View } from "react-native";
-import Age from "../components/Age";
-import Name from "../components/Name";
-import XHandle from "../components/XHandle";
-import Love from "../components/Love";
+import { View, Text } from 'react-native'
+import React from 'react'
+import TextComponent from '../components/TextComponent'
 
-
-function Index(){
-    return <View>
-        <Name/>
-        <Age/>
-        <XHandle/>
-        <Love/>
+const index = () => {
+  return (
+    <View>
+      <TextComponent/>
     </View>
+  )
 }
 
-
-export  default Index;
+export default index
