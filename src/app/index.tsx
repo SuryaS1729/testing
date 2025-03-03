@@ -8,7 +8,7 @@ const index = () => {
   return (
     <View>
      
-    <InlineStyle/>
+
     <InternalStyle/>
     
     </View>
