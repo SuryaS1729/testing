@@ -1,12 +1,15 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import CarComponent from '../components/CarComponent'
+
+import InlineStyle from '../components/InlineStyle'
+import InternalStyle from '../components/InternalStyle'
 
 const index = () => {
   return (
-    <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
+    <View>
      
-    <CarComponent/>
+    <InlineStyle/>
+    <InternalStyle/>
     
     </View>
   )
