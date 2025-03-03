@@ -3,13 +3,14 @@ import React from 'react'
 
 import InlineStyle from '../components/InlineStyle'
 import InternalStyle from '../components/InternalStyle'
+import ExternalStyle from '../components/ExternalStyle'
 
 const index = () => {
   return (
     <View>
      
 
-    <InternalStyle/>
+    <ExternalStyle/>
     
     </View>
   )
