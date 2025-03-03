@@ -1,16 +1,21 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import NameComponent from '../components/NameComponent'
+import AgeComponent from '../components/AgeComponent'
+import FavSubjectComponent from '../components/FavSubjectComponent'
+import XhandleComponent from '../components/XhandleComponent'
 
-import InlineStyle from '../components/InlineStyle'
-import InternalStyle from '../components/InternalStyle'
-import ExternalStyle from '../components/ExternalStyle'
 
 const index = () => {
   return (
-    <View>
+    <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
      
 
-    <ExternalStyle/>
+    <NameComponent/>
+    <AgeComponent/>
+    <FavSubjectComponent/>
+    <XhandleComponent/>
+    
     
     </View>
   )
