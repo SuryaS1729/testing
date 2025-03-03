@@ -6,7 +6,7 @@ const ViewComponent = () => {
   return (
     <View>
       <Text>ViewComponent</Text>
-    <ButtonComponent/>
+    
     </View>
   )
 }
