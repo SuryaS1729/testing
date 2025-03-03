@@ -8,11 +8,9 @@ import CardComponent from '../components/CardComponent'
 
 const index = () => {
   return (
-    <View>
-      <TextComponent/>
-      <ViewComponent/>
-      <ButtonComponent/>
-      <ImageComponent/>
+    <View style={{flex:1, justifyContent:"center", alignItems:"center"}}>
+     
+      
       <CardComponent/>
     </View>
   )
