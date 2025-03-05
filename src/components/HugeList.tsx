@@ -1,6 +1,7 @@
 import { View, Text, FlatList, Image, StyleSheet } from 'react-native'
 import React from 'react'
 import index from '../app';
+import { FlashList } from "@shopify/flash-list";
 
 const HugeList = () => {
 
@@ -325,15 +326,21 @@ const HugeList = () => {
 
 }
   return (
-    <View>
-      <FlatList data = {products}
+    <View style={styles.listContainer}>
+      <FlashList data = {products}
       keyExtractor={(item,index) => index.toString()}
+      estimatedItemSize={340}
       renderItem={renderItem}/>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
+    listContainer: {
+        flex: 1, // Take up all available space within the parent
+        flexGrow: 1,
+    },
+
     productContainer: {
       flex: 1,
       alignItems: "center",
@@ -346,6 +353,7 @@ const styles = StyleSheet.create({
       shadowOpacity: 0.1,
       shadowRadius: 5,
       elevation: 5,
+      
     },
     image: {
       width: 200,
