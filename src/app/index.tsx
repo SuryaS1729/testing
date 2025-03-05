@@ -1,19 +1,14 @@
 import { View, StyleSheet } from 'react-native'
 import React from 'react'
-import HugeList from '../components/HugeList'
+import ParentComponent from '../components/ParentComponent'
 
 const index = () => {
   return (
-    <View style={styles.container}>
-      <HugeList />
+    <View >
+<ParentComponent/>
     </View>
   )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1, // Take up the entire screen height and width
-    flexGrow: 1,
-  },
-});
+
 export default index
