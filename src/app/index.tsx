@@ -1,16 +1,18 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import Component1 from '../components/Toggle'
-import Weather from '../components/Weather'
 import ColorPicker from '../components/ColorPicker'
+
+import Todo from '../components/Todo'
 
 const index = () => {
   
   return (
-    <View style={{flex:1,justifyContent:'center',alignItems:'center'}} >
+    <View >
 {/* <Component1></Component1> */}
 {/* <Weather></Weather> */}
-<ColorPicker/>
+{/* <ColorPicker/> */}
+<Todo/>
+
     </View>
   )
 }
