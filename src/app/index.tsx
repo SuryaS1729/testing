@@ -1,12 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import Component1 from '../components/Component1'
+import Component1 from '../components/Toggle'
+import Weather from '../components/Weather'
 
 const index = () => {
   
   return (
-    <View style={{flex:1,justifyContent:'center',alignItems:'center'}}>
-<Component1></Component1>
+    <View >
+{/* <Component1></Component1> */}
+<Weather></Weather>
     </View>
   )
 }
