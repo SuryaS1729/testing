@@ -1,31 +1,62 @@
-import { View, Text, TextInput, Button } from 'react-native'
-import React, { useState } from 'react'
+import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
 
-const weatherData = {
-    London: "20, sunny",
-    Paris:"19,cloudy",
-    NewYork:"25,rainy",
-    Tokyo:"28,sunny",
-    Sydney:"22,cloudy",
-    Dubai:"35,sunny",
-    Mumbai:"30,rainy",
-}
+const weatherData: Record<string, string> = {
+  London: "20°C, Sunny",
+  Paris: "19°C, Cloudy",
+  NewYork: "25°C, Rainy",
+  Tokyo: "28°C, Sunny",
+  Sydney: "22°C, Cloudy",
+  Dubai: "35°C, Sunny",
+  Mumbai: "30°C, Rainy",
+};
+
 const Weather = () => {
-    const [city, setCity] = useState('')
-    const [weather,setWeather]= useState('')
+  const [city, setCity] = useState<string>('');
+  const [weather, setWeather] = useState<string>('');
 
-    function getWeather(){
-        
-        setWeather(weatherData[city]||"City not found")
-    }
+  function getWeather() {
+    const formattedCity = city.trim(); // Trim to remove unnecessary spaces
+    setWeather(weatherData[formattedCity] || "City not found");
+  }
+
   return (
-    <View>
-      <Text>Weather Today!!</Text>
-      <TextInput placeholder='Enter City' value={city} onChangeText={setCity}/>
-      <Button title='get weather' onPress={getWeather}/>
-      {weather? <Text>{weather}</Text>:null}
+    <View style={styles.container}>
+      <Text style={styles.heading}>Weather Today!!</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Enter City"
+        value={city}
+        onChangeText={setCity}
+      />
+      <Button title="Get Weather" onPress={getWeather} />
+      {weather ? <Text style={styles.result}>{weather}</Text> : null}
     </View>
-  )
-}
+  );
+};
 
-export default Weather
+const styles = StyleSheet.create({
+  container: {
+    padding: 20,
+    alignItems: 'center',
+  },
+  heading: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  input: {
+    borderWidth: 1,
+    borderColor: '#ccc',
+    padding: 10,
+    width: '80%',
+    marginBottom: 10,
+    borderRadius: 5,
+  },
+  result: {
+    fontSize: 16,
+    marginTop: 10,
+  },
+});
+
+export default Weather;
