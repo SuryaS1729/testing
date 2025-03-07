@@ -7,7 +7,7 @@ import ColorPicker from '../components/ColorPicker'
 const index = () => {
   
   return (
-    <View >
+    <View style={{flex:1,justifyContent:'center',alignItems:'center'}} >
 {/* <Component1></Component1> */}
 {/* <Weather></Weather> */}
 <ColorPicker/>
