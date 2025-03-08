@@ -1,18 +1,15 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import ColorPicker from '../components/ColorPicker'
-
-import Todo from '../components/Todo'
+import MyEffect from '../components/MyEffect'
+import DataFetching from '../components/DataFetching'
 
 const index = () => {
   
   return (
-    <View >
-{/* <Component1></Component1> */}
-{/* <Weather></Weather> */}
-{/* <ColorPicker/> */}
-<Todo/>
+    <View>
+{/* <MyEffect/> */}
 
+<DataFetching/>
     </View>
   )
 }
